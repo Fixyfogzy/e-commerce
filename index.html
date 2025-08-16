@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendify | Air Max Sneakers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Header with Cart -->
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <h1 class="logo">trendify</h1>
+      </div>
+      <div class="header-right">
+        <div class="cart-icon" id="cartIcon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="user-avatar">
+          <img src="assets/images/avatar.png" alt="User">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Dropdown (Hidden by Default) -->
+  <div class="cart-dropdown" id="cartDropdown">
+    <h3>Cart</h3>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be added dynamically -->
+      <p class="empty-cart">Your cart is empty.</p>
+    </div>
+  </div>
+
+  <!-- Main Product Section -->
+  <main class="container">
+    <div class="product-page">
+      <!-- Product Gallery -->
+      <section class="product-gallery">
+  <div class="main-image">
+    <img src="images/1.jfif" id="mainImage" alt="Air Max Sneakers">
+  </div>
+  <div class="thumbnails">
+    <div class="thumbnail" onclick="switchImage('images/2.jfif')">
+      <img src="images/2.jfif" alt="Thumbnail 1">
+    </div>
+    <div class="thumbnail" onclick="switchImage('images/3.jfif')">
+      <img src="images/3.jfif" alt="Thumbnail 2">
+    </div>
+    <div class="thumbnail" onclick="switchImage('images/4.jfif')">
+      <img src="images/4.jfif" alt="Thumbnail 3">
+    </div>
+    <div class="thumbnail" onclick="switchImage('images/5.jfif')">
+      <img src="images/5.jfif" alt="Thumbnail 4">
+    </div>
+  </div>
+</section>
+
+      <!-- Product Info -->
+      <section class="product-info">
+        <p class="brand">Trendify</p>
+        <h2 class="product-title">Air Max Limited Edition Sneakers</h2>
+        <p class="product-description">
+          Elevate your streetwear game with these premium sneakers featuring responsive cushioning, breathable mesh, and the iconic Air Max silhouette. Perfect for both style and comfort.
+        </p>
+
+        <!-- Pricing -->
+        <div class="pricing">
+          <div class="price-container">
+            <span class="current-price">$125.00</span>
+            <span class="discount-badge">50%</span>
+          </div>
+          <span class="original-price">$250.00</span>
+        </div>
+
+        <!-- Ratings -->
+        <div class="ratings">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <span class="review-count">120 reviews</span>
+        </div>
+
+        <!-- Quantity Selector -->
+        <div class="quantity-selector">
+          <button class="quantity-btn" onclick="adjustQuantity(-1)">-</button>
+          <span class="quantity" id="quantity">1</span>
+          <button class="quantity-btn" onclick="adjustQuantity(1)">+</button>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart" onclick="addToCart()">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </section>
+    </div>
+  </main>
+
+  <!-- Lightbox (Hidden by Default) -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+  </div>
+
+  <script src="scripts/gallery.js"></script>
+  <script src="scripts/cart.js"></script>
+</body>
+</html>
